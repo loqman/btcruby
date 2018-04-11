@@ -18,7 +18,7 @@ module BTC
     POINT_CONVERSION_COMPRESSED   = 0x02
     POINT_CONVERSION_UNCOMPRESSED = 0x04
 
-    attach_function :SSL_library_init,         [], :int
+    attach_function :SSL_CTX_new,              [], :int
     attach_function :ERR_load_crypto_strings,  [], :void
     attach_function :SSL_load_error_strings,   [], :void
     attach_function :RAND_poll,                [], :int
